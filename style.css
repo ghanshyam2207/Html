@@ -8,35 +8,36 @@
 html, body {
     width: 100%;
     height: 100%;
+    background: #000;
 }
- 
+
 @keyframes bur {
-    
-      0% {
-        transform: translateX(0);
+    0% {
+        border-radius: 10px;
+        background: rgb(64, 40, 40);
         transform: rotate(0deg);
-        background: red;
-      }
-      50% {
-        transform: translateX(300px); /* Adjust distance here */
-        /* transform: rotate(0deg); */
-        background: green;
-      }
-      100% {
-        transform: translateX(0);
-        /* transform: rotate(0deg); */
+    }
+
+    50% {
+        border-radius: 150px;
         background: blue;
-      }
-} 
+        transform: rotate(180deg);
+    }
+
+    100% {
+        border-radius: 10px;
+        background: rgb(61, 1, 1);
+        transform: rotate(360deg);
+    }
+}
 
 .box {
     width: 299px;
     height: 299px;
     background: #000;
+    top: 30%;
+    left: 30%;
     position: absolute;
-    /* top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    animation: bur 3s ease-in-out 2;
-    cursor: pointer;
+    transform: translate(-100%, -100%);
+    animation: bur 3s linear infinite;
 }
